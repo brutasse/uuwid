@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uuwid"
+version = "0.1.0"
+description = "Encode 128-bit UUIDs into words, and vice versa"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+uuwid = "uuwid.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["uuwid"]
